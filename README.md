@@ -1,4 +1,4 @@
-# Dark Trooper
+# Dark Trooper (Ulauncher Theme)
 
 [![Pull Request Labels](https://github.com/gowizzard/dark-trooper/actions/workflows/pull-request-labels.yml/badge.svg)](https://github.com/gowizzard/dark-trooper/actions/workflows/pull-request-labels.yml)
 
