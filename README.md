@@ -6,6 +6,8 @@
 
 Is a dark theme for the [Ulauncher](https://ulauncher.io/) application. The theme is based on the Ulauncher dark theme.
 
+![screenshot](https://github.com/gowizzard/dark-trooper/assets/30717818/e400df96-5e17-4d26-836c-0fa0a4954748)
+
 ## Installation
 
 If you want to install the Dark Trooper, you can use the following commands:
