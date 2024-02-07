@@ -5,35 +5,20 @@ on:
         types: [opened]
 
 jobs:
-    pull-request-labeler:
-
+    pull-request-labels:
         runs-on: ubuntu-latest
-
         permissions:
+            contents: read
             pull-requests: write
 
         steps:
 
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             - name: Add label to pull request
-              uses: actions/github-script@v6
+              uses: actions/github-script@v7
               with:
-                  script: |
-                      const title = context.payload.pull_request.title.toLowerCase();
-                      if (!title) return;
-                      
-                      function getLabelFromTitle(title) {
-                          if (title.includes('feat!:')) return 'breaking change';
-                          if (title.includes('fix:')) return 'fix';
-                          if (title.includes('feat:')) return 'feature';
-                          return null;
-                      }
-                      
-                      const label = getLabelFromTitle(title);
-                      if (label) {
-                          github.rest.issues.addLabels({
-                              issue_number: context.issue.number,
-                              owner: context.repo.owner,
-                              repo: context.repo.repo,
-                              labels: [label] 
-                          });
-                      }
+                script: |
+                    const script = require('.github/workflows/scripts/labels.js')
+                    script({github, context})
