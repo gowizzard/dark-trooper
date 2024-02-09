@@ -8,12 +8,12 @@ body:
     - type: markdown
       attributes:
         value: |
-            Bitte fülle alle Felder zu dem Feature Request sorgfältig aus, sodass diese unter besten Voraussetzungen bearbeitet werden können.
+            Please fill in all fields for the feature request carefully so that they can be processed under the best possible conditions.
     - type: textarea
       id: which-feature
       attributes:
-        label: Welches Feature möchtest du vorschlagen?
-        description: Beschreibe das Feature so detailliert wie möglich.
-        placeholder: "Ich möchte das Feature, weil..."
+        label: Which feature would you like to suggest?
+        description: Describe the feature in as much detail as possible.
+        placeholder: "I want the feature because..."
       validations:
         required: true
